@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+    <nav class="navbar px-4">
+        <span class="navbar-brand">API Practica</span>
+        <div class="d-flex gap-2">
+            <a href="index.html" class="btn">Productos</a>
+            <a href="users.html" class="btn">Usuarios</a>
+            <a href="posts.html" class="btn">Posts</a>
+            <a href="carts.html" class="btn active">Carts</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Carts</h2>
+
+        <div class="d-flex gap-2 mb-3">
+            <input id="idFilter" type="number" class="form-control w-auto" placeholder="Buscar por ID">
+            <button class="btn btn-success" onclick="getFindByIdCart()">Consultar</button>
+            <button class="btn btn-secondary" onclick="getAllCarts()">Ver todos</button>
+        </div>
+
+        <div class="d-flex gap-2 mb-3">
+            <input id="new_userId" type="number" class="form-control" placeholder="User ID">
+            <input id="new_total" type="number" class="form-control" placeholder="Total">
+            <button class="btn btn-primary" onclick="createCart()">Agregar</button>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User ID</th>
+                    <th>Total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="container"></tbody>
+        </table>
+    </div>
+
+    <script src="../js/const.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/carts.js"></script>
+</body>
+</html>

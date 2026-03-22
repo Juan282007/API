@@ -24,18 +24,20 @@
         <h1>Lista productos</h1>
  
         <!-- Buscar -->
+    <div class="d-flex gap-2 mb-3 align-items-center">
         <label>Id</label>
-        <input id="idFilter" type="text" class="form-control">
-        <button class="btn btn-success mt-2" onclick="getFindByIdProduct()">Consultar</button>
- 
+        <input id="idFilter" type="text" class="form-control w-auto">
+        <button class="btn btn-success" onclick="getFindByIdProduct()">Consultar</button>
+        <button class="btn btn-secondary" onclick="getAllProducts()">Ver todos</button>
+</div>
+
         <!-- Crear -->
-        <h5 class="mt-4">Agregar producto</h5>
+    <h5 class="mt-4">Agregar producto</h5>
         <div class="d-flex gap-2 mb-3">
-            <input id="new_title" class="form-control" placeholder="Título">
-            <input id="new_price" type="number" class="form-control" placeholder="Precio">
-            <button class="btn btn-primary" onclick="createProduct()">Agregar</button>
-        </div>
- 
+        <input id="new_title" class="form-control" placeholder="Título">
+        <input id="new_price" type="number" class="form-control" placeholder="Precio">
+        <button class="btn btn-primary" onclick="createProduct()">Agregar</button>
+</div>
         <!-- Tabla -->
         <table class="table">
             <thead>

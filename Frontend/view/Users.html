@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+    <nav class="navbar px-4">
+        <span class="navbar-brand">API Practica</span>
+        <div class="d-flex gap-2">
+            <a href="index.html" class="btn">Productos</a>
+            <a href="users.html" class="btn active">Usuarios</a>
+            <a href="posts.html" class="btn">Posts</a>
+            <a href="carts.html" class="btn">Carts</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Usuarios</h2>
+
+        <div class="d-flex gap-2 mb-3">
+            <input id="idFilter" type="number" class="form-control w-auto" placeholder="Buscar por ID">
+            <button class="btn btn-success" onclick="getFindByIdUser()">Consultar</button>
+            <button class="btn btn-secondary" onclick="getAllUsers()">Ver todos</button>
+        </div>
+
+        <div class="d-flex gap-2 mb-3">
+            <input id="new_firstName" class="form-control" placeholder="Nombre">
+            <input id="new_lastName" class="form-control" placeholder="Apellido">
+            <input id="new_email" class="form-control" placeholder="Email">
+            <button class="btn btn-primary" onclick="createUser()">Agregar</button>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="container"></tbody>
+        </table>
+    </div>
+
+    <script src="../js/const.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/users.js"></script>
+</body>
+</html>
