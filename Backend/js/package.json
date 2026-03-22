@@ -1,0 +1,16 @@
+{
+  "name": "api-practica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "merge": "node Frontend/js/merge.js",
+    "start": "json-server --watch Backend/Data/db.json --port 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
